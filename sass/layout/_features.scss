@@ -1,0 +1,40 @@
+/* features */
+.feature-list {
+    display: flex;
+}
+
+.feature-list__item {
+    width: 270px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.feature-list__thumb {
+    display: flex;
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+    background: var(--secondary-background-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-list__icon {
+    border-radius: 4px;
+}
+
+.feature-list__title {
+    margin-bottom: 10px;
+
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.feature-list__text {
+    font-size: 14px;
+    line-height: 1.72;
+}

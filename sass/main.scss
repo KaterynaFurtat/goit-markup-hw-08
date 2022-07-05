@@ -1,0 +1,25 @@
+@import "./utils/variables";
+@import "./base/reset";
+@import "./base/common";
+@import "./utils/hidden";
+
+
+@import "./components/container";
+@import "./components/socials";
+
+@import "./layout/header";
+@import "./layout/logo";
+@import "./layout/nav";
+@import "./layout/contacts";
+
+@import "./layout/hero";
+@import "./components/section";
+@import "./components/modal";
+@import "./layout/features";
+@import "./layout/worktype";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/filter-list";
+@import "./layout/works-list";
+

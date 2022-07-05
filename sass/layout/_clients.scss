@@ -1,0 +1,46 @@
+/* Clients */
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+}
+
+.clients-list__item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+
+    transition: border var(--time-duration) var(--timing-function);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--axent-color);
+    }
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.clients-list__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color var(--time-duration) var(--timing-function);
+    &:hover,
+    &:focus {
+        background-color: var(--white-color);
+    }
+}
+
+.clients-list__icon {
+    fill: var(--icon-color);
+
+    transition: fill var(--time-duration) var(--timing-function);
+    .clients-list__link:hover &,
+    .clients-list__link:focus & {
+        fill: var(--axent-color);
+    }
+}
