@@ -125,21 +125,37 @@ body.modal-open {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
 
 .page-header__container {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .page-header__container {
+    position: relative;
+  }
+}
 
 .menu-button {
-  display: inline-flex;
+  display: flex;
+  z-index: 1;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
-  transition: fill 3000ms var(--timing-function);
 }
 .menu-button :hover, .menu-button :focus {
   fill: var(--axent-color);
@@ -162,22 +178,30 @@ body.modal-open {
   display: none;
 }
 
-.menu-container {
-  background-color: var(--white-color);
-}
-.menu-container.is-open {
-  display: block;
-}
 @media screen and (max-width: 767px) {
   .menu-container {
-    display: none;
+    background-color: var(--white-color);
+    display: flex;
     position: absolute;
-    top: 100%;
+    flex-direction: column;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     padding: 48px 40px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: opacity var(--time-duration) var(--timing-function);
+  }
+  .menu-container.is-open {
+    opacity: 1;
     transform: translateX(0);
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -199,10 +223,22 @@ body.modal-open {
 
 .page-header__logo {
   display: flex;
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  width: 145px;
+  width: 134px;
+}
+@media screen and (min-width: 768px) {
+  .page-header__logo {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-header__logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    width: 145px;
+  }
 }
 
 .logo__accent {
@@ -210,15 +246,16 @@ body.modal-open {
 }
 
 /* nav */
+@media screen and (max-width: 767px) {
+  .nav {
+    margin-bottom: auto;
+  }
+}
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;
     position: relative;
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav {
-    margin-bottom: 302px;
+    margin-right: auto;
   }
 }
 
@@ -274,6 +311,13 @@ body.modal-open {
 }
 
 /* contacts */
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .contacts {
     display: flex;
@@ -289,7 +333,6 @@ body.modal-open {
 
 .contacts__link {
   display: flex;
-  flex-direction: column-reverse;
   font-family: inherit;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -319,10 +362,59 @@ body.modal-open {
   }
 }
 
-.contacts__icon {
-  display: block;
-  margin-right: 10px;
-  fill: currentColor;
+@media screen and (max-width: 767px) {
+  .contacts__icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__icon {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__mail {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__phone {
+    font-size: 34px;
+    line-height: 1.18;
+    margin-bottom: 32px;
+  }
+}
+
+.social-header {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .social-header {
+    display: none;
+  }
+}
+
+.social-header__link {
+  font-family: inherit;
+  color: var(--axent-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.social-header__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.social-header__item:not(:first-child) {
+  padding-left: 10px;
 }
 
 /* hero */
