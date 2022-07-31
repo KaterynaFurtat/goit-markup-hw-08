@@ -1,8 +1,12 @@
 .works-list {
-    @media screen and (min-width: 768px) {
+    
         display: flex;
         flex-wrap: wrap;
-        margin: -15px;
+        // margin: -15px;
+        
+        gap: 30px;
+        @media screen and (max-width: 479px) {
+            width: 100%;
     }
 }
 
@@ -10,39 +14,50 @@
     transition: box-shadow var(--time-duration) var(--timing-function),
         transform var(--time-duration) var(--timing-function);
 
-    &:nth-child(3n) {
-        margin-right: 0;
-    }
-    &:nth-last-child(-n+3) {
-        margin-bottom: 0;
-    }
+    // &:nth-child(3n) {
+    //     margin-right: 0;
+    // }
+    // &:nth-last-child(-n+3) {
+    //     margin-bottom: 0;
+    // }
     &:hover,
     &:focus {
          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
-    @media screen and (max-width: 480px) {
-        max-width: 450px;
-    }
+
+        //    &:first-child {}
     
-    @media screen and (max-width: 767px) {
-        &:not(:last-child) {
-        margin-bottom: 30px;
-        }
-    }
+    // &:not(:last-child) {
+    //     margin-bottom: 30px;
+    // }
+        
+    // @media screen and (max-width: 480px) {
+    //     max-width: 480px;
+    // }
+    width: 100%;
+    // @media screen and (max-width: 767px) {
+    //     &:not(:last-child) {
+    //     margin-bottom: 30px;
+    //     }
+    // }
     
     @media screen and (min-width: 768px) {
-        flex-basis: calc((100% - 4*15px)/2);
-        margin: 15px;
+        // flex-basis: calc((100% - 4*15px)/2);
+        // margin: 15px;
+        width: calc((100% - 30px) / 2);
     }
     
     @media screen and (min-width: 1200px) {
-        flex-basis: calc((100% - 6*15px)/3);
+        // flex-basis: calc((100% - 6*15px)/3);
+        width: calc((100% - 60px) / 3);
     }
 }
 
 .works-list__link {
-    display: block;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .works-list__thumb {
@@ -72,9 +87,17 @@
 }
 
 .works-list__title {
+    flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid var(--cards-border-color);
     border-top: 0;
+    // @media screen and (min-width:768px) {
+    //         display: flex;
+    //         flex-direction: column;
+    //         flex-grow: 1;
+    //     }
+
+    
 }
 
 .works-list__client {

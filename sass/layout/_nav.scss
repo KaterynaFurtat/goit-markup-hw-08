@@ -31,8 +31,11 @@
     }
 
     @media screen and (min-width:768px) {
+        position: relative;
         font-size: 14px;
         line-height: 1.14;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
@@ -41,7 +44,7 @@
 
     @media screen and (min-width:768px) {
         &::after {
-            content: "";
+            content: " ";
             position: absolute;
             display: block;
             bottom: 0;
