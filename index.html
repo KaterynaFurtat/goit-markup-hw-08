@@ -82,7 +82,7 @@
             <li class="contacts__item">
               <a
                 class="contacts__link contacts__phone"
-                href="tel:+38 096 111 11 11"
+                href="tel:+380961111111"
               >
                 <svg class="contacts__icon" width="10" height="16">
                   <use
@@ -310,7 +310,7 @@
 
               <div class="team-list__text">
                 <h3 class="team-list__names">Игорь Демьяненко</h3>
-                <p lang="en">Product Designer</p>
+                <p class="team-list__position" lang="en">Product Designer</p>
                 <ul class="soc-list list">
                   <li class="soc-list__item">
                     <a href="" class="soc-list__link link">
@@ -395,7 +395,7 @@
 
               <div class="team-list__text">
                 <h3 class="team-list__names">Ольга Репина</h3>
-                <p lang="en">Frontend Developer</p>
+                <p class="team-list__position" lang="en">Frontend Developer</p>
                 <ul class="soc-list list">
                   <li class="soc-list__item">
                     <a href="" class="soc-list__link link">
@@ -480,7 +480,7 @@
 
               <div class="team-list__text">
                 <h3 class="team-list__names">Николай Тарасов</h3>
-                <p lang="en">Marketing</p>
+                <p class="team-list__position" lang="en">Marketing</p>
                 <ul class="soc-list list">
                   <li class="soc-list__item">
                     <a href="" class="soc-list__link link">
@@ -565,7 +565,7 @@
 
               <div class="team-list__text">
                 <h3 class="team-list__names">Михаил Ермаков</h3>
-                <p lang="en">UI Designer</p>
+                <p class="team-list__position" lang="en">UI Designer</p>
                 <ul class="soc-list list">
                   <li class="soc-list__item">
                     <a href="" class="soc-list__link link">
@@ -750,26 +750,19 @@
           </div>
         </div>
         <div>
+          <p class="subscribe-form__title">Подпишитесь на рассылку</p>
           <form name="subscribe-form" class="subscribe-form">
-            <div class="subscribe-form__thumb">
-              <label class="subscribe-form__label" id="subscribe-id"
-                >Подпишитесь на рассылку</label
-              >
+            <label class="subscribe-form__label">
               <input
                 type="email"
                 name="subscribe-email"
                 class="subscribe-form__input"
                 placeholder="E-mail"
-                id="subscribe-id"
               />
-            </div>
+            </label>
+
             <button type="submit" class="button subscribe-form__button">
               Подписаться
-              <!-- <svg class="subscribe-form__icon" width="24" height="24">
-                <use
-                  href="./images/icons.svg/symbol-defs.svg#icon-icon-send"
-                ></use>
-              </svg> -->
             </button>
           </form>
         </div>
@@ -851,7 +844,7 @@
             <span class="form-modal__checkbox"></span>
             <span class="form-modal__title"
               >Соглашаюсь с рассылкой и принимаю
-              <a href class="form-modal__link">Условия договора</a>
+              <a href="#" class="form-modal__link">Условия договора</a>
             </span>
           </label>
           <button type="submit" class="button form-modal__button">

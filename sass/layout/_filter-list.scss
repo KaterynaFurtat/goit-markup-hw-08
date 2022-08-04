@@ -2,21 +2,27 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
-    margin-top: -15px;
+    row-gap: 15px;
+    column-gap: 8px;
+
 
     @media screen and (min-width: 768px) {
         justify-content: center;
+        margin-bottom: 30px;
     }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        }
 }
 
-.filter-list__item {
-    &:not(:last-child) {
-        margin-right: 8px;
-    }
-    @media screen and (max-width: 767px) {
-        margin-top: 15px;
-    }
-}
+// .filter-list__item {
+//     &:not(:last-child) {
+//         margin-right: 8px;
+//     }
+//     @media screen and (max-width: 767px) {
+//         margin-top: 15px;
+//     }
+// }
 
 .filter-list__button {
     display: inline-block;
